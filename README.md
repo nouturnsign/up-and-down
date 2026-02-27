@@ -12,8 +12,7 @@ Make sure to have `ffmpeg` installed. Tested with Python 3.12. Then,
 
 ```sh
 ./download.sh && ./split.py # for Shakespeare plays
-./arc.py                    # for rolling average
-./cumulative.py             # for cumulative
+./arc.py                    # for rolling average and cumulative
 ```
 
 Then, simply view any `.html` file in your browser.
