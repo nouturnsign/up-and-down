@@ -42,6 +42,8 @@ jobs:
       - name: Split Shakespeare plays
         run: ./split.py
       - name: Generate arcs
+        env:
+          TQDM_DISABLE: 1
         run: ./arc.py shakespeare_plays/*.txt
       - name: Set up Node
         uses: actions/setup-node@v6
