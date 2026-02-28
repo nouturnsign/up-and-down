@@ -281,7 +281,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Process multiple texts to generate individual and combined cumulative arc graphs.")
     parser.add_argument("text_files", nargs="+", help="One or more text files to process")
-    parser.add_argument("--output_dir", default="html_output", help="Directory for all generated HTML files")
+    parser.add_argument("--output_dir", default="public", help="Directory for all generated HTML files")
     parser.add_argument("--max-workers", type=int, default=5)
     args = parser.parse_args()
 
