@@ -1,17 +1,46 @@
 import React, { useState } from "react";
 import { LineChart, Activity, Book, Menu, X, Home } from "lucide-react";
 
-// Hardcoded mapping of your plays
-// You can easily add or remove plays from this list as you process more texts.
+// Hardcoded mapping of plays
 const PLAYS = [
-  { id: "hamlet", title: "Hamlet" },
-  { id: "macbeth", title: "Macbeth" },
-  { id: "romeo_and_juliet", title: "Romeo & Juliet" },
-  { id: "othello", title: "Othello" },
-  { id: "king_lear", title: "King Lear" },
   { id: "a_midsummer_nights_dream", title: "A Midsummer Night's Dream" },
+  { id: "alls_well_that_ends_well", title: "All's Well That Ends Well" },
+  { id: "antony_and_cleopatra", title: "Antony and Cleopatra" },
+  { id: "as_you_like_it", title: "As You Like It" },
+  { id: "coriolanus", title: "Coriolanus" },
+  { id: "cymbeline", title: "Cymbeline" },
+  { id: "hamlet", title: "Hamlet" },
+  { id: "julius_caesar", title: "Julius Caesar" },
+  { id: "king_henry_iv_part_1", title: "Henry IV, Part 1" },
+  { id: "king_henry_iv_part_2", title: "Henry IV, Part 2" },
+  { id: "king_henry_v", title: "Henry V" },
+  { id: "king_henry_vi_part_1", title: "Henry VI, Part 1" },
+  { id: "king_henry_vi_part_2", title: "Henry VI, Part 2" },
+  { id: "king_henry_vi_part_3", title: "Henry VI, Part 3" },
+  { id: "king_henry_viii", title: "Henry VIII" },
+  { id: "king_john", title: "King John" },
+  { id: "king_lear", title: "King Lear" },
+  { id: "king_richard_ii", title: "Richard II" },
+  { id: "king_richard_iii", title: "Richard III" },
+  { id: "loves_labours_lost", title: "Love's Labour's Lost" },
+  { id: "macbeth", title: "Macbeth" },
+  { id: "measure_for_measure", title: "Measure for Measure" },
   { id: "much_ado_about_nothing", title: "Much Ado About Nothing" },
+  { id: "othello", title: "Othello" },
+  { id: "pericles", title: "Pericles" },
+  { id: "romeo_and_juliet", title: "Romeo & Juliet" },
+  { id: "the_comedy_of_errors", title: "The Comedy of Errors" },
+  { id: "the_merchant_of_venice", title: "The Merchant of Venice" },
+  { id: "the_merry_wives_of_windsor", title: "The Merry Wives of Windsor" },
+  { id: "the_taming_of_the_shrew", title: "The Taming of the Shrew" },
   { id: "the_tempest", title: "The Tempest" },
+  { id: "the_two_gentlemen_of_verona", title: "The Two Gentlemen of Verona" },
+  { id: "the_two_noble_kinsmen", title: "The Two Noble Kinsmen" },
+  { id: "the_winters_tale", title: "The Winter's Tale" },
+  { id: "timon_of_athens", title: "Timon of Athens" },
+  { id: "titus_andronicus", title: "Titus Andronicus" },
+  { id: "troilus_and_cressida", title: "Troilus and Cressida" },
+  { id: "twelfth_night", title: "Twelfth Night" },
 ];
 
 export default function App() {
