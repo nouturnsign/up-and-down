@@ -2,7 +2,6 @@ html_output
 shakespeare_plays
 pg100.txt
 public/*.html
-!public/.gitkeep
 
 # Logs
 logs
