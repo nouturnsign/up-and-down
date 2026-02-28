@@ -36,6 +36,9 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+          cache: 'pip' # caching pip dependencies
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
       - name: Split Shakespeare plays
         run: ./split.py
       - name: Generate arcs
@@ -45,7 +48,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: 'npm'
-      - name: Install dependencies
+      - name: Install Node dependencies
         run: npm ci
       - name: Build
         run: npm run build
