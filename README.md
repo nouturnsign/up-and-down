@@ -17,13 +17,16 @@ the plays into a structured format suitable for algorithmic analysis.
 
 Algorithm/Tool: `spaCy` (using the `en_core_web_sm` model).
 
-Process: 1. The raw text of each play is loaded into memory. 2. The text is
-passed through the `spaCy` NLP pipeline to perform sentence tokenization. 3.
-Data Cleaning: Sentences are stripped of newline characters. A filtering
-mechanism is applied to drop any sentence containing three or fewer words. This
-crucial step removes noisy data such as short stage directions (e.g., "Exit
-Hamlet."), character monikers, or isolated exclamations, ensuring the sentiment
-analysis is performed on complete, context-rich thoughts.
+Process:
+
+1. The raw text of each play is loaded into memory.
+2. The text is passed through the `spaCy` NLP pipeline to perform sentence
+   tokenization.
+3. Data Cleaning: Sentences are stripped of newline characters. A filtering
+   mechanism is applied to drop any sentence containing three or fewer words.
+   This crucial step removes noisy data such as short stage directions (e.g.,
+   "Exit Hamlet."), character monikers, or isolated exclamations, ensuring the
+   sentiment analysis is performed on complete, context-rich thoughts.
 
 ### Phase 2: Contextual Sentiment Scoring
 
@@ -85,7 +88,7 @@ The numerical data is mapped into interactive visual artifacts using
 `plotly.graph_objects`.
 
 Individual Graphs: For each play, two interactive HTML files are generated: an
-\_original.html (showing volatility) and a \_cumulative.html (showing the
+`_original.html` (showing volatility) and a `_cumulative.html` (showing the
 additive fortune). These graphs include toggleable layers and embed the raw text
 directly into the hover data.
 
@@ -141,8 +144,12 @@ Then, build and view.
 ./download.sh                    # download complete Shakespeare works
 ./split.py                       # separate the plays
 ./arc.py shakespeare_plays/*.txt # generate the plots
-npm run dev                      # run development server to view
+npm run build                    # build
+npm run preview                  # preview
 ```
 
 Note that `./arc.py` provides additional options for customization. See
 `./arc.py --help` if this step fails.
+
+During development, it can be helpful to use `npm run dev` instead for the
+development server.
