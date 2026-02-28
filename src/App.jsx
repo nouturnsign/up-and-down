@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LineChart, Activity, Book, Menu, X, Home } from "lucide-react";
+import { Github, LineChart, Activity, Book, Menu, X, Home } from "lucide-react";
 
 // Hardcoded mapping of plays
 const PLAYS = [
@@ -183,6 +183,16 @@ export default function App() {
               Interactive Plotly Visualization
             </p>
           </div>
+          {/* GitHub Link */}
+          <a
+            href="https://github.com/nouturnsign/up-and-down"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors bg-slate-100 hover:bg-slate-200 px-4 py-2 rounded-md font-medium text-sm"
+          >
+            <Github size={18} />
+            <span className="hidden sm:inline">GitHub</span>
+          </a>
         </header>
 
         {/* Iframe Container */}
