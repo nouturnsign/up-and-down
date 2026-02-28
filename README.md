@@ -95,7 +95,7 @@ Master Aggregation:
    every processed play.
 2. The plays are sorted in descending order from the highest positive score to
    the lowest negative score.
-3. A unified index.html graph is generated plotting the Macro Arcs of all 38
+3. A unified master.html graph is generated plotting the Macro Arcs of all 38
    plays together.
 4. Color Mapping: A dynamic HSV-to-RGB color gradient is applied based on the
    sorted rank. The most positive plays are mapped to green, mid-tier plays to

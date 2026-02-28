@@ -290,7 +290,7 @@ if __name__ == "__main__":
     processed_results = []
 
     print(f"Starting batch processing of {len(args.text_files)} files...")
-    print(f"Outputting dual graphs and combined index.html to: '{args.output_dir}/'")
+    print(f"Outputting dual graphs and combined master.html to: '{args.output_dir}/'")
     
     with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
         futures = [executor.submit(process_single_file, tf, args.output_dir) for tf in args.text_files]
@@ -301,8 +301,8 @@ if __name__ == "__main__":
                 processed_results.append(res)
 
     if processed_results:
-        # Generate the master 'index.html' holding everything
-        index_path = os.path.join(args.output_dir, "index.html")
+        # Generate the master 'master.html' holding everything
+        index_path = os.path.join(args.output_dir, "master.html")
         plot_combined_arc(processed_results, index_path)
     else:
         print("No valid data was processed.")
